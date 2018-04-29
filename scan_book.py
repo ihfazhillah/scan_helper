@@ -1,6 +1,6 @@
-# masukkan direktori
-directory = raw_input("Tulis Directory yang akan kamu pakai: ")
-# tentukan ukuran, x mendatar, y vertikal dalam mm
+# Enter Directory Name
+directory = raw_input("Dirname: ")
+# x as horizontal, and y vertical, in mm
 try:
     x = raw_input("tentukan ukuran x(mendatar) dalam mm: ")
     int(x)
@@ -11,7 +11,7 @@ try:
     int(x)
 except ValueError:
     y= raw_input("tentukan ukuran y(meninggi) dalam mm [harus angka]: ")
-# tentukan format yang mau dipakai pnm/tiff
+# decide the format (tiff/pnm)
 format_pilihan = None
 while format_pilihan is None:
     format_pilihan = raw_input("pnm/tiff: ")
@@ -19,9 +19,9 @@ while format_pilihan is None:
         format_pilihan = raw_input("pnm/tiff (format yang anda pilih salah):")
 x = int(x)
 y = int(y)
-# kemudian, loop dipause dan kalau mau jalankan lagi tinggal enter terminal.
-# otomatis nanti dia buat file dengan nomor yang langsung loop
-# selesai dengan menggukan control c 
+
+# loop 
+
 import os
 count = 1
 os.mkdir(directory)
